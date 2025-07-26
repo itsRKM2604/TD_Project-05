@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #343434;
+  font-size: 80%;
+}
+
+.container {
+  width: 30%;
+}
+
+.color {
+  color: white;
+}
+
+.card {
+  box-shadow: -2px -2px 10px #f8f8f8, 2px 2px 10px #eee;
+  background-color: #252525;
+  border-radius: 15px;
+  padding: 3%;
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+#icon {
+  width: 20%;
+  margin: 0.5rem auto 1rem;
+  filter: invert(100%);
+}
+
+#weather-status {
+  color: #f8f8f8;
+  margin: 0.7rem auto;
+  text-transform: capitalize;
+}
+
+button.refresh {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  padding: 0.5rem;
+  border: 0;
+  background: transparent;
+  color: #9c9c9d;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: -2px -2px 10px #fafafa, 2px 2px 10px #eee;
+}
+
+button.refresh:hover {
+  box-shadow: inset -1px -1px 10px #fafafa, inset 1px 1px 10px #eee;
+}
+
+#location {
+  color: #eee;
+  margin-left: 10px;
+}
+
+#city {
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 1rem auto;
+  width: 90%;
+  color: #343434;
+  font-size: 1rem;
+}
+
+#city:focus {
+  outline: none;
+}
+
+#message {
+  color: red;
+  text-align: center;
+}
