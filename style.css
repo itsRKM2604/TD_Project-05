@@ -89,3 +89,22 @@ button.refresh:hover {
   color: red;
   text-align: center;
 }
+
+@media screen and (max-width: 920px) {
+  .container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 80%;
+    font-size: 70%;
+  }
+}
