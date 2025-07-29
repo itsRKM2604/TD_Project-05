@@ -66,7 +66,6 @@ getLocation = async () => {
       q = `${lat},${lon}`;
       //   q = "England";
       link = `${API_URL}` + `key=${API_KEY}&q=${q}`;
-      console.log(link);
       var request = new XMLHttpRequest();
       request.open("GET", link, true);
       request.send();
@@ -88,9 +87,15 @@ window.onload = () => {
   getLocation();
 };
 
+var form = document.getElementById("form");
+handleForm = () => {
+  event.preventDefault();
+  searchLocationWeather();
+};
+form.addEventListener("submit", handleForm);
+
 // Function to search for weather data based on user input
 searchLocationWeather = () => {
-  event.preventDefault();
   let city = document.getElementById("city").value;
   if (city === "") {
     document.getElementById("message").innerText = "Please enter a city name";

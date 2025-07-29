@@ -21,8 +21,13 @@
   </head>
   <body>
     <div class="container">
+      <p id="message"></p>
       <div class="card">
-        <form action="" class="input-container">
+        <form
+          id="form"
+          onsubmit="searchLocationWeather()"
+          class="input-container"
+        >
           <input
             type="text"
             name="city"
@@ -31,12 +36,8 @@
             onkeypress="if(event.keyCode === 13) searchLocationWeather()"
             required
           />
-          <button
-            class="search"
-            type="submit"
-            onsubmit="searchLocationWeather()"
-          >
-            <i class="fa-solid fa-magnifying-glass-location"></i>
+          <button class="search" type="submit" id="searchWeather">
+            <i class="fa-solid fa-arrow-right"></i>
           </button>
         </form>
         <h2>
