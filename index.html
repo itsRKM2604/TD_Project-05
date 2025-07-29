@@ -21,20 +21,24 @@
   </head>
   <body>
     <div class="container">
-      <p id="message"></p>
       <div class="card">
-        <div class="input-container">
+        <form action="" class="input-container">
           <input
             type="text"
             name="city"
             id="city"
             placeholder="Enter City Name"
             onkeypress="if(event.keyCode === 13) searchLocationWeather()"
+            required
           />
-          <button class="search" onclick="searchLocationWeather()">
+          <button
+            class="search"
+            type="submit"
+            onsubmit="searchLocationWeather()"
+          >
             <i class="fa-solid fa-magnifying-glass-location"></i>
           </button>
-        </div>
+        </form>
         <h2>
           <i class="fa fa-map-marker color"></i><span id="location"></span>
         </h2>

@@ -9,11 +9,12 @@ body {
   font-family: "Poppins", sans-serif;
   color: #fff;
   background-color: #343434;
-  font-size: 80%;
+  font-size: 100%;
 }
 
 .container {
   width: 30%;
+  /* height: 60%; */
 }
 
 .color {
@@ -85,7 +86,7 @@ button.refresh:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1%;
+  gap: 1rem;
 }
 
 .input-container button {
@@ -114,21 +115,26 @@ button.refresh:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1200px) {
   .container {
     width: 40%;
   }
 }
 
+@media screen and (max-width: 920px) {
+  .container {
+    width: 45%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
-    width: 50%;
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .container {
     width: 80%;
-    font-size: 70%;
   }
 }

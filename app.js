@@ -90,6 +90,7 @@ window.onload = () => {
 
 // Function to search for weather data based on user input
 searchLocationWeather = () => {
+  event.preventDefault();
   let city = document.getElementById("city").value;
   if (city === "") {
     document.getElementById("message").innerText = "Please enter a city name";
