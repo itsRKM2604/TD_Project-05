@@ -30,21 +30,20 @@ body {
 }
 
 .card h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin: 1rem 0;
   color: #fff;
 }
 
-#icon {
-  width: 20%;
-  margin: 0.5rem auto 1rem;
+.icon {
+  width: 2rem;
   filter: invert(100%);
 }
 
 #weather-status {
   color: #f8f8f8;
-  margin: 0.7rem auto;
+  margin: 0.5rem auto;
   text-transform: capitalize;
 }
 
@@ -82,6 +81,21 @@ button.refresh:hover {
   font-size: 1rem;
 }
 
+.context {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.context p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+#wind_speed {
+  display: inline-block;
+}
+
 .input-container {
   display: flex;
   justify-content: center;
@@ -103,7 +117,8 @@ button.refresh:hover {
 }
 
 .search {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  border: none;
 }
 
 #city:focus {
@@ -119,11 +134,19 @@ button.refresh:hover {
   .container {
     width: 40%;
   }
+
+  .context p {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 920px) {
   .container {
     width: 45%;
+  }
+
+  .context p {
+    font-size: 0.9rem;
   }
 }
 

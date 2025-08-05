@@ -19,6 +19,7 @@ const monthNames = [
 
 // Function to insert weather data into the HTML
 insertData = (obj) => {
+  console.log(obj);
   document.getElementById("temp").innerHTML = `${Math.floor(
     obj.current.temp_c
   )}</span><sup>o</sup>C`;
@@ -32,6 +33,7 @@ insertData = (obj) => {
     minute: "2-digit",
   });
 
+  // Icon rendering as per the temperature conditions
   const cloud = obj.current.cloud;
   if (cloud < 20) {
     src = "./resources/001-sun.png";
@@ -50,9 +52,17 @@ insertData = (obj) => {
     weather = "Heavy Rain";
   }
   document.getElementById("icon").src = src;
-  document.getElementById(
-    "date"
-  ).innerText = `${day} ${month} ● ${weather} ● ${time}`;
+
+  // Display the last update time
+  document.getElementById("date").innerText = `${day} ${month} ● ${time}`;
+  document.getElementById("weather_condition").innerHTML = `${weather}`;
+
+  // Wind speed
+  document.getElementById("wind_speed").innerHTML =
+    obj.current.wind_kph + " Kph";
+
+  // humidity
+  document.getElementById("humidity").innerHTML = obj.current.humidity + "%";
 };
 
 // Function to get the user's location and fetch weather data
@@ -81,14 +91,14 @@ getLocation = async () => {
 // Load the weather data when the window loads
 window.onload = () => {
   document.getElementById("location").innerText = "Loading...";
-  document.getElementById("temp").innerHTML = "0</span><sup>o</sup>C";
+  document.getElementById("temp").innerHTML = "Loading...";
   document.getElementById("icon").src = "./resources/";
   document.getElementById("date").innerText = "Loading...";
   getLocation();
 };
 
 var form = document.getElementById("form");
-handleForm = () => {
+handleForm = (event) => {
   event.preventDefault();
   searchLocationWeather();
 };

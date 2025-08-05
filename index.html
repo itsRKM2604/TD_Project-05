@@ -27,6 +27,7 @@
           id="form"
           onsubmit="searchLocationWeather()"
           class="input-container"
+          method="post"
         >
           <input
             type="text"
@@ -46,8 +47,24 @@
         <div id="weather-status">
           <span id="date"></span>
         </div>
-        <h4><span id="temp"></span></h4>
-        <img src="" alt="" id="icon" />
+        <div>
+          <h4><span id="temp"></span></h4>
+        </div>
+        <div class="context">
+          <div>
+            <img src="resources/wind_speed.png" class="icon" />
+            <br />
+            <p id="wind_speed"></p>
+          </div>
+          <div>
+            <img id="icon" class="icon" />
+            <p id="weather_condition"></p>
+          </div>
+          <div>
+            <img src="resources/humidity.png" class="icon" />
+            <p id="humidity"></p>
+          </div>
+        </div>
         <button onclick="window.location.reload()" class="refresh">
           <i class="fa fa-refresh"></i>
         </button>
