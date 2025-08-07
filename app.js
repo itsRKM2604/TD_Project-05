@@ -98,11 +98,18 @@ window.onload = () => {
 };
 
 var form = document.getElementById("form");
-handleForm = (event) => {
+handleSearchForm = (event) => {
   event.preventDefault();
   searchLocationWeather();
 };
-form.addEventListener("submit", handleForm);
+form.addEventListener("submit", handleSearchForm);
+
+var refreshForm = document.getElementById("refreshForm");
+handleRefreshForm = (event) => {
+  event.preventDefault();
+  getLocation();
+};
+refreshForm.addEventListener("submit", handleRefreshForm);
 
 // Function to search for weather data based on user input
 searchLocationWeather = () => {
